@@ -1,23 +1,28 @@
 public abstract class BinarySearchTree {
+
+// Attributes for the binary search tree
     protected int size;
     protected Node root;
 
+ // Constructor to initialize the tree
     public BinarySearchTree() {
         size = 0;
         root = null;
     }
 
+// Abstract method to add a new element to the tree
     public abstract boolean add(int data);
 
+//returns size 
     public int getSize() {
         return size;
     }
-
+// class that represents the nodes of the tree
     protected class Node {
         int data;
         Node left;
         Node right;
-
+// Constructor
         public Node(int data) {
             this.data = data;
             left = null;
