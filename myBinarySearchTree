@@ -1,0 +1,60 @@
+package Lab5;
+
+public class myBinarySearchTree extends BinarySearchTree {
+	
+	
+	myBinarySearchTree()
+	{
+		size = 0;
+		root = null; 
+	}
+		public boolean add(int data)
+	{
+		if(root == null)
+		{
+			root =  new Node(data);
+			size++;
+			return true;
+					
+		}
+		else {
+			Node localRoot = root; 
+			for(;;)
+			{
+				if(data == localRoot.data)
+				{
+					return false; 
+				}
+				else if(data < localRoot.data)
+				{
+					if(localRoot.left != null)
+					{
+						localRoot = localRoot.left;
+					}
+					else
+					{
+						localRoot.left = new Node(data);
+						size++;
+						return true;
+					}
+					
+				}
+				else if(data > localRoot.data)
+				{
+					if(localRoot.right != null)
+					{
+						localRoot = localRoot.right;
+					}
+					else
+					{
+						localRoot.right = new Node(data);
+						size++;
+						return true; 
+					}
+				}
+			}
+			
+		}
+	}
+
+}
