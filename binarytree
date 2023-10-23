@@ -1,0 +1,27 @@
+public abstract class BinarySearchTree {
+    protected int size;
+    protected Node root;
+
+    public BinarySearchTree() {
+        size = 0;
+        root = null;
+    }
+
+    public abstract boolean add(int data);
+
+    public int getSize() {
+        return size;
+    }
+
+    protected class Node {
+        int data;
+        Node left;
+        Node right;
+
+        public Node(int data) {
+            this.data = data;
+            left = null;
+            right = null;
+        }
+    }
+}
