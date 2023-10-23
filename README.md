@@ -1,7 +1,9 @@
 # lab-5M
 
-Team menbers
+TEAM MEMBERS:
 
-1. Esther Mugisha (Team leader)
-2. Pat Sullivan (Task 1)
-3. Colby (Task 2)
+1. Esther Mugisha (TEAM LEADER)
+2. Pat Sullivan (TASK 1)
+3. Colby (TASK 2)
+   
+   
