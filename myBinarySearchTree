@@ -2,14 +2,16 @@ package Lab5;
 
 public class myBinarySearchTree extends BinarySearchTree {
 	
-	
+	//Constructor
 	myBinarySearchTree()
 	{
 		size = 0;
 		root = null; 
 	}
+		//Add method =
 		public boolean add(int data)
 	{
+		//if the root is empty adds a new node to the root and increases the size 
 		if(root == null)
 		{
 			root =  new Node(data);
@@ -17,14 +19,18 @@ public class myBinarySearchTree extends BinarySearchTree {
 			return true;
 					
 		}
+		//if the root is not empty sets the local root to the root until it finds the appropriate empty node 
 		else {
 			Node localRoot = root; 
+			// Loops through the tree until an empty node is found 
 			for(;;)
 			{
+				//if the data is the same as the data in the root returns false 
 				if(data == localRoot.data)
 				{
 					return false; 
 				}
+				//if the data is less than the localroot data, checks if the root is empty and either changes the target to the left node or adds a item in the left node
 				else if(data < localRoot.data)
 				{
 					if(localRoot.left != null)
@@ -39,6 +45,7 @@ public class myBinarySearchTree extends BinarySearchTree {
 					}
 					
 				}
+				// Same as above with a greater data going to the right 
 				else if(data > localRoot.data)
 				{
 					if(localRoot.right != null)
